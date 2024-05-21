@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Poppins;
+}
+*:focus,
+*:active {
+     outline: none !important;
+     -webkit-tap-highlight-color: transparent;
+}
+html,
+body {
+     display: grid;
+     height: 100%;
+     width: 100%;
+     place-items: center;
+     background: linear-gradient(315deg, #fff, #acc1d7);
+}
+.content {
+     display: inline-flex;
+     list-style: none;
+}
+.content .icon {
+     position: relative;
+     background: #fff;
+     border-radius: 50%;
+     padding: 15px;
+     margin: 10px;
+     width: 50px;
+     height: 50px;
+     font-size: 22px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+     cursor: pointer;
+     transition: all 0.2s cubic-bezier(0.68, 0.55, 0.265, 1.55);
+}
+.content .tooltip {
+     position: absolute;
+     top: 0;
+     font-size: 15px;
+     background: #fff;
+     padding: 5px 8px;
+     border-radius: 5px;
+     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+     opacity: 0;
+     pointer-events: none;
+     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.content .tooltip::before {
+     position: absolute;
+     content: "";
+     height: 8px;
+     width: 8px;
+     background: #fff;
+     bottom: -3px;
+     left: 50%;
+     transform: translate(-50%) rotate(45deg);
+     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.content .icon:hover .tooltip {
+     top: -45px;
+     opacity: 1;
+     visibility: visible;
+     pointer-events: auto;
+}
+.content .icon:hover span,
+.content .icon:hover .tooltip {
+     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+.content .facebook:hover,
+.content .facebook:hover .tooltip,
+.content .facebook:hover .tooltip::before {
+     background: #175aff;
+     color: #fff;
+}
+.content .twitter:hover,
+.content .twitter:hover .tooltip,
+.content .twitter:hover .tooltip::before {
+     background: #1da1f2;
+     color: #fff;
+}
+.content .instagram:hover,
+.content .instagram:hover .tooltip,
+.content .instagram:hover .tooltip::before {
+     background: #e4405f;
+     color: #fff;
+}
+.content .whatsapp:hover,
+.content .whatsapp:hover .tooltip,
+.content .whatsapp:hover .tooltip::before {
+     background: #21e645;
+     color: #fff;
+}
+.content .youtube:hover,
+.content .youtube:hover .tooltip,
+.content .youtube:hover .tooltip::before {
+     background: #cd201f;
+     color: #fff;
+}
